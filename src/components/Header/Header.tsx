@@ -1,18 +1,20 @@
 import React, { FC } from 'react';
-import style from './Header.module.css';
+// import style from './Header.module.css';
 
 type TLevel = '1' | '2' | '3' | '4' | '5' | '6';
 
 export type THeader = {
   level: TLevel;
   text: string;
+  className: any;
 };
 
-export const Header: FC<THeader> = ({ level, text }) => {
+export const Header: FC<THeader> = ({ className, level, text }) => {
+  console.log(className.header);
   return (() => {
     switch (level) {
       case '1':
-        return <h1 className={style.header}>{text}</h1>;
+        return <h1 className={className.header}>{text}</h1>;
       case '2':
         return <h2>{text}</h2>;
       case '3':
@@ -25,7 +27,7 @@ export const Header: FC<THeader> = ({ level, text }) => {
         return <h6>{text}</h6>;
 
       default:
-        return <h1>{text}</h1>;
+        return <h1 className={className.header}>{text}</h1>;
     }
   })();
 };

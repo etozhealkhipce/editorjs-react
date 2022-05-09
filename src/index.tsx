@@ -1,11 +1,10 @@
 import React from 'react';
 import { FC } from 'react';
 import { Header } from './components/Header';
+import style from './Header.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
-
-  console.log(data);
 
   return (
     <>
@@ -14,7 +13,14 @@ export const Parser: FC<any> = ({ data }) => {
 
         switch (type) {
           case 'header':
-            return <Header key={id} level={data.level} text={data.text} />;
+            return (
+              <Header
+                key={id}
+                level={data.level}
+                text={data.text}
+                className={style}
+              />
+            );
 
           default:
             return <div>Error!</div>;
