@@ -1,9 +1,11 @@
 import React from 'react';
 import { FC } from 'react';
-import { Header } from './Header';
+import { Header } from './components/Header/Header';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
+
+  console.log(data);
 
   return (
     <>
@@ -22,4 +24,4 @@ export const Parser: FC<any> = ({ data }) => {
   );
 };
 
-export { Header, THeader } from './Header';
+export { Header, THeader } from './components/Header/Header';

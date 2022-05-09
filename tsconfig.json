@@ -3,6 +3,7 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "lib": ["dom", "esnext"],
     "importHelpers": true,
     // output .d.ts declaration files for consumers
