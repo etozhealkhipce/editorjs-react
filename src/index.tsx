@@ -1,6 +1,6 @@
 import React from 'react';
 import { FC } from 'react';
-import { Header } from './components/Header/Header';
+import { Header } from './components/Header';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
