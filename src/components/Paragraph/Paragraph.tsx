@@ -6,23 +6,23 @@ export type TParagraph = {
 };
 
 const hrefRegex = /(<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1)/;
-const a = /((["'])>(.*?))<\/a>/;
+const linkRegex = /((["'])>(.*?))<\/a>/;
 
-const testRegex =
+const linkObjRegex =
   /({{link:___https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*),linkText:___?.*)/;
 
 export const Paragraph: FC<TParagraph> = ({ className, text }) => {
   const getHref = text.replace(hrefRegex, '{{link:___');
-  const replaceLinks = getHref.match(a);
+  const replaceLinks = getHref.match(linkRegex);
   const replaceSpace = replaceLinks?.[3].replace(' ', '+++');
   const rp = getHref.replace(
-    a,
+    linkRegex,
     replaceSpace ? `,linkText:___${replaceSpace}}}` : '*'
   );
 
   const rpArray = rp.split(' ');
   const findLinks = rpArray.map((fl) => {
-    if (fl.match(testRegex)) {
+    if (fl.match(linkObjRegex)) {
       const linkArray = fl
         .split(',')
         .map((la) => la.split('___'))
