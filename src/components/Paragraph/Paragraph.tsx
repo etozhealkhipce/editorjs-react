@@ -8,14 +8,36 @@ export type TParagraph = {
 const hrefRegex = /(<a\s+(?:[^>]*?\s+)?href=(["'])(.*?)\1)/;
 const a = /((["'])>(.*?))<\/a>/;
 
+const testRegex =
+  /({{link:___https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*),linkText:___?.*)/;
+
 export const Paragraph: FC<TParagraph> = ({ className, text }) => {
-  const getHref = text.replace(hrefRegex, '{{ link: ');
+  const getHref = text.replace(hrefRegex, '{{link:___');
   const replaceLinks = getHref.match(a);
+  const replaceSpace = replaceLinks?.[3].replace(' ', '+++');
   const rp = getHref.replace(
     a,
-    replaceLinks ? `, linkText: ${replaceLinks?.[3]} }}` : '*'
+    replaceSpace ? `,linkText:___${replaceSpace}}}` : '*'
   );
-  console.log(rp);
+
+  const rpArray = rp.split(' ');
+  const findLinks = rpArray.map((fl) => {
+    if (fl.match(testRegex)) {
+      const linkArray = fl
+        .split(',')
+        .map((la) => la.split('___'))
+        .map((splitArray) => splitArray[1]);
+      const linkObj = {
+        link: linkArray[0],
+        text: linkArray[1].replace('+++', ' ').replace('}}', ''),
+      };
+      return linkObj;
+    }
+
+    return fl;
+  });
+
+  console.log(findLinks);
 
   return (() => <p className={className.paragraph}>{text}</p>)();
 };
