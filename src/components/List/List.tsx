@@ -7,11 +7,12 @@ export type TList = {
 };
 
 export const List: FC<TList> = ({ className, listItems }) => {
-  console.log(listItems);
   return (() => (
     <ul className={className.list}>
-      {listItems.map((li) => (
-        <li className={className.listItem}>{li}</li>
+      {listItems.map((li, index) => (
+        <li className={className.listItem} key={index}>
+          {li}
+        </li>
       ))}
     </ul>
   ))();
