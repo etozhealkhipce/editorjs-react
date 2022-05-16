@@ -4,8 +4,8 @@ import { Header } from './components/Header';
 import { List } from './components/List/List';
 import { Paragraph } from './components/Paragraph/Paragraph';
 import { Image } from './components/Image/Image';
-import Styles from './Styles.module.css';
 import { Delimiter } from './components/Delimiter/Delimiter';
+import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
