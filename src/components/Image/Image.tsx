@@ -1,13 +1,16 @@
 import React, { FC } from 'react';
+import Styles from './Image.module.css';
 
 export type TImage = {
   caption: string;
-  className: any;
   src: string;
 };
 
-export const Image: FC<TImage> = ({ src, className, caption }) => {
-  return (() => (
-    <img src={src} className={className.paragraph} alt={caption} />
-  ))();
+export const ImageC: FC<TImage> = ({ src, caption }) => {
+  return (
+    <>
+      <img src={src} className={Styles.image} alt={caption} />
+      {caption && <caption>{caption}</caption>}
+    </>
+  );
 };

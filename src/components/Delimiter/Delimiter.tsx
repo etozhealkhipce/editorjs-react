@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
+import Styles from './Delimiter.module.css';
 
-export type TDelimiter = {
-  className: any;
-};
+export type TDelimiter = {};
 
-export const Delimiter: FC<TDelimiter> = ({ className }) => {
-  return (() => <div className={className.delimiter}></div>)();
+export const Delimiter: FC<TDelimiter> = () => {
+  return <div className={Styles.delimiter}></div>;
 };

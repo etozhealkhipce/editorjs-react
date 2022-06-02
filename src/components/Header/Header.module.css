@@ -1,3 +1,28 @@
 .header {
-  color: red;
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans;
+  letter-spacing: -0.03em;
+  padding: 0.6em 0 3px;
+  margin: 0;
+  line-height: 1.25em;
+  outline: none;
+}
+
+.header_h2 {
+  composes: header;
+}
+
+.header_h3 {
+  composes: header;
+}
+
+.header_h4 {
+  composes: header;
+}
+
+.header_h5 {
+  composes: header;
+}
+
+.header_h6 {
+  composes: header;
 }
