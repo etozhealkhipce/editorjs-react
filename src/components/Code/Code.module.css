@@ -2,7 +2,7 @@
   display: block;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
+  overflow: scroll;
   max-width: 100%;
   min-width: 100px;
   background: #f4f4f4;
@@ -12,4 +12,5 @@
   page-break-inside: avoid;
   line-height: 1.6;
   padding: 1rem 1.5rem;
+  resize: vertical;
 }
