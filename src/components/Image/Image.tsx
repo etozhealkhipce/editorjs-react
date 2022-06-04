@@ -6,7 +6,7 @@ export type TImage = {
   src: string;
 };
 
-export const ImageC: FC<TImage> = ({ src, caption }) => {
+export const Image: FC<TImage> = ({ src, caption }) => {
   return (
     <>
       <img src={src} className={Styles.image} alt={caption} />
