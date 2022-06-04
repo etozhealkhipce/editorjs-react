@@ -4,6 +4,7 @@ import List from './components/List';
 import Paragraph from './components/Paragraph';
 import Image from './components/Image';
 import Delimiter from './components/Delimiter';
+import Code from './components/Code';
 // import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
@@ -27,6 +28,8 @@ export const Parser: FC<any> = ({ data }) => {
             return (
               <Image key={id} src={data.file.url} caption={data.caption} />
             );
+          case 'code':
+            return <Code key={id} code={data.code} />;
           default:
             return <div>Error!</div>;
         }
