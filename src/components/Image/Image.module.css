@@ -8,6 +8,6 @@
   width: 100%;
   display: inline-block;
   box-sizing: border-box;
-  margin-top: 0.5rem;
   text-align: left;
+  margin: 1rem 0;
 }
