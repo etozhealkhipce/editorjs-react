@@ -119,6 +119,13 @@ const mockData = {
         code: 'func main() {\n    var name string\n    var age int\n    fmt.Print("Введите имя: ")\n    fmt.Fscan(os.Stdin, &name) \n     \n    fmt.Print("Введите возраст: ")\n    fmt.Fscan(os.Stdin, &age)\n     \n    fmt.Println(name, age)\n}',
       },
     },
+    {
+      id: '-fM5Vw-Bc5',
+      type: 'rawTool',
+      data: {
+        html: 'dawdaw',
+      },
+    },
   ],
   version: '2.24.3',
 };

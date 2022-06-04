@@ -5,6 +5,7 @@ import Paragraph from './components/Paragraph';
 import Image from './components/Image';
 import Delimiter from './components/Delimiter';
 import Code from './components/Code';
+import RawTool from './components/RawTool';
 // import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
@@ -30,6 +31,8 @@ export const Parser: FC<any> = ({ data }) => {
             );
           case 'code':
             return <Code key={id} code={data.code} />;
+          case 'rawTool':
+            return <RawTool key={id} html={data.html} />;
           default:
             return <div>Error!</div>;
         }
