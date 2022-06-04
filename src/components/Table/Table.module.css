@@ -1,0 +1,16 @@
+.wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow: scroll;
+}
+
+.td {
+  border: 1px solid rgb(138, 138, 138);
+  padding: 0.5rem;
+}

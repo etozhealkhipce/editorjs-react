@@ -7,6 +7,7 @@ import Delimiter from './components/Delimiter';
 import Code from './components/Code';
 import RawTool from './components/RawTool';
 import Quote from './components/Quote';
+import Table from './components/Table';
 // import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
@@ -16,8 +17,6 @@ export const Parser: FC<any> = ({ data }) => {
     <>
       {blocks.map((item: any) => {
         const { type, data, id } = item;
-
-        console.log(type);
 
         switch (type) {
           case 'header':
@@ -43,6 +42,14 @@ export const Parser: FC<any> = ({ data }) => {
                 text={data.text}
                 caption={data.caption}
                 alignment={data.alignment}
+              />
+            );
+          case 'table':
+            return (
+              <Table
+                key={id}
+                content={data.content}
+                withHeadings={data.withHeadings}
               />
             );
           default:
