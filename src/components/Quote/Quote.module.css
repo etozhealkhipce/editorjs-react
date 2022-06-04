@@ -1,0 +1,14 @@
+.blockquote {
+  margin: 0;
+}
+
+.paragraph {
+  display: block;
+  white-space: pre;
+  max-width: 100%;
+  background: #eee;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  font-style: oblique;
+  border-radius: 5px;
+}

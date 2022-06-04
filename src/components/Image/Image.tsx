@@ -8,9 +8,9 @@ export type TImage = {
 
 export const Image: FC<TImage> = ({ src, caption }) => {
   return (
-    <>
+    <figure>
       <img src={src} className={Styles.image} alt={caption} />
-      {caption && <caption>{caption}</caption>}
-    </>
+      {caption && <caption className={Styles.caption}>{caption}</caption>}
+    </figure>
   );
 };

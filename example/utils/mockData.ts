@@ -126,6 +126,15 @@ const mockData = {
         html: 'dawdaw',
       },
     },
+    {
+      id: 'h9o3IKatXu',
+      type: 'quote',
+      data: {
+        text: 'dawdaw',
+        caption: 'dawd',
+        alignment: 'left',
+      },
+    },
   ],
   version: '2.24.3',
 };

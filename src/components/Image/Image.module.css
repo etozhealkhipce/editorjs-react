@@ -1,3 +1,13 @@
 .image {
-  width: 500px;
+  width: 100%;
+}
+
+.caption {
+  border: 1px solid rgb(230, 230, 230);
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  text-align: left;
 }

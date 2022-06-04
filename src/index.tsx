@@ -6,6 +6,7 @@ import Image from './components/Image';
 import Delimiter from './components/Delimiter';
 import Code from './components/Code';
 import RawTool from './components/RawTool';
+import Quote from './components/Quote';
 // import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
@@ -15,6 +16,8 @@ export const Parser: FC<any> = ({ data }) => {
     <>
       {blocks.map((item: any) => {
         const { type, data, id } = item;
+
+        console.log(type);
 
         switch (type) {
           case 'header':
@@ -33,8 +36,17 @@ export const Parser: FC<any> = ({ data }) => {
             return <Code key={id} code={data.code} />;
           case 'rawTool':
             return <RawTool key={id} html={data.html} />;
+          case 'quote':
+            return (
+              <Quote
+                key={id}
+                text={data.text}
+                caption={data.caption}
+                alignment={data.alignment}
+              />
+            );
           default:
-            return <div>Error!</div>;
+            return <div key="error">Error!</div>;
         }
       })}
     </>
