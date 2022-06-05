@@ -1,0 +1,23 @@
+.wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+  overflow: scroll;
+}
+
+.td {
+  border: 1px solid #e8e8eb;
+  padding: 0.5rem;
+}
+
+.tdBorderless {
+  border: 1px solid #e8e8eb;
+  padding: 0.5rem;
+  border-left: none;
+  border-right: none;
+}

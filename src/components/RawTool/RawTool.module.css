@@ -1,0 +1,16 @@
+.rawTool {
+  display: block;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  background: #2a2a2a;
+  border: 1px solid rgb(42, 42, 42);
+  color: rgb(255, 255, 255);
+  page-break-inside: avoid;
+  line-height: 1.6;
+  padding: 1rem 1.5rem;
+  resize: vertical;
+  margin: 1rem 0;
+}

@@ -1,0 +1,28 @@
+.header {
+  font-family: Lucida Grande, Lucida Sans Unicode, Lucida Sans;
+  letter-spacing: -0.03em;
+  padding: 0.6em 0 3px;
+  line-height: 1.25em;
+  outline: none;
+  margin: 1rem 0;
+}
+
+.header_h2 {
+  composes: header;
+}
+
+.header_h3 {
+  composes: header;
+}
+
+.header_h4 {
+  composes: header;
+}
+
+.header_h5 {
+  composes: header;
+}
+
+.header_h6 {
+  composes: header;
+}

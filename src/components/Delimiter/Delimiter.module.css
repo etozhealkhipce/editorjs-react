@@ -1,0 +1,16 @@
+.delimiter {
+  font-size: 55px;
+  color: #313649;
+  letter-spacing: 0.005em;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.delimiter::before {
+  display: inline-block;
+  content: '***';
+  font-size: 30px;
+  height: 30px;
+  letter-spacing: 0.2em;
+}

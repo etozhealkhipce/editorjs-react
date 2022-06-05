@@ -1,0 +1,33 @@
+.figure {
+  width: 100%;
+  margin: 0;
+}
+
+.background {
+  padding: 15px 139px;
+  background: #cdd1e0;
+}
+
+.backgroundBorder {
+  composes: background;
+  border: 1px solid #e8e8eb;
+}
+
+.image {
+  width: 100%;
+}
+
+.imageBorder {
+  composes: image;
+  border: 1px solid #e8e8eb;
+}
+
+.caption {
+  border: 1px solid rgb(230, 230, 230);
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 1rem 0;
+}
