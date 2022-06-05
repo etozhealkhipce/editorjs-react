@@ -8,7 +8,6 @@ import Code from './components/Code';
 import RawTool from './components/RawTool';
 import Quote from './components/Quote';
 import Table from './components/Table';
-// import Styles from './Styles.module.css';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
@@ -29,7 +28,13 @@ export const Parser: FC<any> = ({ data }) => {
             return <Delimiter />;
           case 'image':
             return (
-              <Image key={id} src={data.file.url} caption={data.caption} />
+              <Image
+                key={id}
+                src={data.file.url}
+                caption={data.caption}
+                border={data.withBorder}
+                background={data.withBackground}
+              />
             );
           case 'code':
             return <Code key={id} code={data.code} />;

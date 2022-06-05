@@ -14,24 +14,41 @@ export const Table: FC<TTable> = ({ withHeadings, content }) => {
     <div className={Styles.wrapper}>
       <table className={Styles.table}>
         {withHeadings && (
-          <tr className={Styles.tr}>
-            {heading[0]?.map((text, index) => (
-              <th key={`${text}-${index}`} className={Styles.td}>
-                {text}
-              </th>
-            ))}
-          </tr>
+          <thead className={Styles.tr}>
+            <tr>
+              {heading[0]?.map((text, index) => (
+                <th
+                  key={`${text}-${index}`}
+                  className={
+                    index === 0 || index === heading[0].length - 1
+                      ? Styles.tdBorderless
+                      : Styles.td
+                  }
+                >
+                  {text}
+                </th>
+              ))}
+            </tr>
+          </thead>
         )}
-
-        {_content.map((row, index) => (
-          <tr key={`row-${index}`} className={Styles.tr}>
-            {row.map((text, index) => (
-              <td key={`${text}-${index}`} className={Styles.td}>
-                {text}
-              </td>
-            ))}
-          </tr>
-        ))}
+        <tbody>
+          {_content.map((row, index) => (
+            <tr key={`row-${index}`} className={Styles.tr}>
+              {row.map((text, index) => (
+                <td
+                  key={`${text}-${index}`}
+                  className={
+                    index === 0 || index === row.length - 1
+                      ? Styles.tdBorderless
+                      : Styles.td
+                  }
+                >
+                  {text}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

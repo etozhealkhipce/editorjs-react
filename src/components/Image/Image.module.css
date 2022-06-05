@@ -1,5 +1,25 @@
+.figure {
+  width: 100%;
+  margin: 0;
+}
+
+.background {
+  padding: 15px 139px;
+  background: #cdd1e0;
+}
+
+.backgroundBorder {
+  composes: background;
+  border: 1px solid #e8e8eb;
+}
+
 .image {
   width: 100%;
+}
+
+.imageBorder {
+  composes: image;
+  border: 1px solid #e8e8eb;
 }
 
 .caption {

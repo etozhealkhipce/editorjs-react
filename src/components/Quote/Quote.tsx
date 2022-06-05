@@ -9,7 +9,7 @@ export type TQuote = {
 
 export const Quote: FC<TQuote> = ({ text, caption }) => {
   return (
-    <figure>
+    <figure className={Styles.figure}>
       <blockquote className={Styles.blockquote}>
         <p className={Styles.paragraph}>{text}</p>
       </blockquote>

@@ -11,6 +11,13 @@
 }
 
 .td {
-  border: 1px solid rgb(138, 138, 138);
+  border: 1px solid #e8e8eb;
   padding: 0.5rem;
+}
+
+.tdBorderless {
+  border: 1px solid #e8e8eb;
+  padding: 0.5rem;
+  border-left: none;
+  border-right: none;
 }

@@ -107,9 +107,9 @@ const mockData = {
           url: 'https://codex.so/public/app/img/external/codex2x.png',
         },
         caption: 'Test',
-        withBorder: false,
+        withBorder: true,
         stretched: false,
-        withBackground: false,
+        withBackground: true,
       },
     },
     {
@@ -136,46 +136,33 @@ const mockData = {
       },
     },
     {
-      id: '8K1iHqHH57',
-      type: 'table',
-      data: {
-        withHeadings: false,
-        content: [
-          [
-            'dawdaw',
-            'dawd',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-            'jjjj',
-          ],
-          ['dawd', 'awd', ''],
-          ['awd', '123', ''],
-        ],
-      },
+      "id" : "J1V4bu3QIV",
+      "type" : "table",
+      "data" : {
+          "withHeadings" : false,
+          "content" : [
+              [
+                  "1",
+                  "2",
+                  "3"
+              ],
+              [
+                  "11",
+                  "22",
+                  "33"
+              ],
+              [
+                  "111",
+                  "222",
+                  "333"
+              ],
+              [
+                  "1111",
+                  "",
+                  ""
+              ]
+          ]
+      }
     },
     {
       id: '8K1iH232qHH57',

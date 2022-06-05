@@ -1,3 +1,8 @@
+.figure {
+  width: 100%;
+  margin: 0;
+}
+
 .blockquote {
   margin: 0;
 }
