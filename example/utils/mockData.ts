@@ -2,12 +2,52 @@ const mockData = {
   time: 1652097236789,
   blocks: [
     {
-      id: 'm1StTEhnqp',
-      type: 'header',
-      data: {
-        text: 'Editor.js',
-        level: 2,
-      },
+      "id" : "jyLyQSFCwX",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 1
+      }
+    },
+    {
+      "id" : "hvOfuu-vfx",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 2
+      }
+    },
+    {
+      "id" : "VaKCmBAiNm",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 3
+      }
+    },
+    {
+      "id" : "vw-1FAjuOr",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 4
+      }
+    },
+    {
+      "id" : "7ZOouHbH6P",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 5
+      }
+    },
+    {
+      "id" : "y1366YniV2",
+      "type" : "header",
+      "data" : {
+        "text" : "Editor.js",
+        "level" : 6
+      }
     },
     {
       id: 'rbh77wBtsc',
