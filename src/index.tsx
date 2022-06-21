@@ -8,6 +8,7 @@ import Code from './components/Code';
 import RawTool from './components/RawTool';
 import Quote from './components/Quote';
 import Table from './components/Table';
+import './generalStyles.css';
 
 export const Parser: FC<any> = ({ data }) => {
   const { blocks } = data;
@@ -25,7 +26,7 @@ export const Parser: FC<any> = ({ data }) => {
           case 'list':
             return <List key={id} listItems={data.items} />;
           case 'delimiter':
-            return <Delimiter />;
+            return <Delimiter key={id} />;
           case 'image':
             return (
               <Image
