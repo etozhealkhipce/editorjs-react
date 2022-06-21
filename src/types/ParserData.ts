@@ -1,4 +1,4 @@
-export interface IParagtraph {
+export interface IParagraph {
   id: string,
   type: "paragraph",
   data: {
@@ -82,7 +82,7 @@ export interface ITable {
   }
 };
 
-export type TBlocks = (IParagtraph | IHeader | IList | IDelimeter | IImage | ICode | IRawData | IQuote | ITable);
+export type TBlocks = (IParagraph | IHeader | IList | IDelimeter | IImage | ICode | IRawData | IQuote | ITable);
 
 export interface IParser {
   time: number,
