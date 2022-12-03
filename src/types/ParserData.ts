@@ -7,6 +7,7 @@ import { TParagraphData } from 'components/Paragraph/Paragraph';
 import { TQuoteData } from 'components/Quote/Quote';
 import { TRawToolData } from 'components/RawTool/RawTool';
 import { TTableData } from 'components/Table/Table';
+
 import {
   CODE_KEY,
   DELIMITER_KEY,
@@ -19,10 +20,8 @@ import {
   TABLE_KEY,
 } from 'utils/componentKeys';
 
-type TCommonType<T, K> = {
+type TCommonType = {
   id: string;
-  type: T;
-  data: K;
 };
 
 type TParagraph = TCommonType<typeof PARAGRAPH_KEY, TParagraphData>;
@@ -46,8 +45,8 @@ type TBlock =
   | TQuote
   | TTable;
 
-export interface IParser {
+export type IParser = {
   time: number;
   version: string;
   blocks: TBlock[];
-}
+};
