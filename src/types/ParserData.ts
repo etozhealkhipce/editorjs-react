@@ -1,100 +1,53 @@
-export interface IParagraph {
+import { TCodeData } from 'components/Code/Code';
+import { TDelimiterData } from 'components/Delimiter/Delimiter';
+import { THeaderData } from 'components/Header/Header';
+import { TImageData } from 'components/Image/Image';
+import { TListData } from 'components/List/List';
+import { TParagraphData } from 'components/Paragraph/Paragraph';
+import { TQuoteData } from 'components/Quote/Quote';
+import { TRawToolData } from 'components/RawTool/RawTool';
+import { TTableData } from 'components/Table/Table';
+import {
+  CODE_KEY,
+  DELIMITER_KEY,
+  HEADER_KEY,
+  IMAGE_KEY,
+  LIST_KEY,
+  PARAGRAPH_KEY,
+  QUOTE_KEY,
+  RAW_TOOL_KEY,
+  TABLE_KEY,
+} from 'utils/componentKeys';
+
+type TCommonType<T, K> = {
   id: string;
-  type: 'paragraph';
-  data: {
-    text: string;
-  };
-}
+  type: T;
+  data: K;
+};
 
-type TLevel = 1 | 2 | 3 | 4 | 5 | 6;
+type TParagraph = TCommonType<typeof PARAGRAPH_KEY, TParagraphData>;
+type THeader = TCommonType<typeof HEADER_KEY, THeaderData>;
+type TList = TCommonType<typeof LIST_KEY, TListData>;
+type TDelimeter = TCommonType<typeof DELIMITER_KEY, TDelimiterData>;
+type TImage = TCommonType<typeof IMAGE_KEY, TImageData>;
+type TCode = TCommonType<typeof CODE_KEY, TCodeData>;
+type TRawData = TCommonType<typeof RAW_TOOL_KEY, TRawToolData>;
+type TQuote = TCommonType<typeof QUOTE_KEY, TQuoteData>;
+type TTable = TCommonType<typeof TABLE_KEY, TTableData>;
 
-export interface IHeader {
-  id: string;
-  type: 'header';
-  data: {
-    text: string;
-    level: TLevel;
-  };
-}
-
-export interface IList {
-  id: string;
-  type: 'list';
-  data: {
-    style: 'unordered' | 'ordered';
-    items: string[];
-  };
-}
-
-export interface IDelimeter {
-  id: string;
-  type: 'delimiter';
-  // TODO change
-  data?: any;
-}
-
-export interface IImage {
-  id: string;
-  type: 'image';
-  data: {
-    file: {
-      url: string;
-    };
-    caption?: string;
-    withBorder?: boolean;
-    stretched?: boolean;
-    withBackground?: boolean;
-  };
-}
-
-export interface ICode {
-  id: string;
-  type: 'code';
-  data: {
-    code: string;
-  };
-}
-
-export interface IRawData {
-  id: string;
-  type: 'rawTool';
-  data: {
-    html: string;
-  };
-}
-
-export interface IQuote {
-  id: string;
-  type: 'quote';
-  data: {
-    text: string;
-    caption: string;
-    alignment: 'left' | 'center' | 'right';
-  };
-}
-
-export interface ITable {
-  id: string;
-  type: 'table';
-  data: {
-    withHeadings?: boolean;
-    content: string[][];
-  };
-}
-
-export type TBlocks =
-  | IParagraph
-  | IHeader
-  | IList
-  | IDelimeter
-  | IImage
-  | ICode
-  | IRawData
-  | IQuote
-  | ITable;
+type TBlock =
+  | TParagraph
+  | THeader
+  | TList
+  | TDelimeter
+  | TImage
+  | TCode
+  | TRawData
+  | TQuote
+  | TTable;
 
 export interface IParser {
   time: number;
   version: string;
-  blocks: TBlocks[];
+  blocks: TBlock[];
 }

@@ -1,33 +1,39 @@
 import React, { FC } from 'react';
 import Styles from './Image.module.css';
 
-export type TImage = {
-  caption: string;
-  src: string;
-  border?: boolean;
-  background?: boolean;
+export type TImageData = {
+  file: {
+    url: string;
+  };
+  caption?: string;
+  withBorder?: boolean;
+  stretched?: boolean;
+  withBackground?: boolean;
 };
 
-export const Image: FC<TImage> = ({
-  src,
+export const Image: FC<TImageData> = ({
+  file,
   caption,
-  border = false,
-  background = false,
+  withBorder = false,
+  withBackground = false,
+  stretched = false,
 }) => {
   return (
-    <figure className={Styles.figure}>
-      {background ? (
-        <div className={!border ? Styles.background : Styles.backgroundBorder}>
+    <figure className={stretched ? Styles.stretched : Styles.figure}>
+      {withBackground ? (
+        <div
+          className={!withBorder ? Styles.background : Styles.backgroundBorder}
+        >
           <img
-            src={src}
-            className={!border ? Styles.image : Styles.imageBorder}
+            src={file.url}
+            className={!withBorder ? Styles.image : Styles.imageBorder}
             alt={caption}
           />
         </div>
       ) : (
         <img
-          src={src}
-          className={!border ? Styles.image : Styles.imageBorder}
+          src={file.url}
+          className={!withBorder ? Styles.image : Styles.imageBorder}
           alt={caption}
         />
       )}

@@ -153,6 +153,19 @@ const mockData = {
       }
     },
     {
+      id: "oJ2T0cwRmG",
+      type: "image",
+      data: {
+        file: {
+          url: "https://codex.so/public/app/img/external/codex2x.png"
+        },
+        caption: "Stretched",
+        withBorder: false,
+        stretched: true,
+        withBackground: false
+      }
+    },
+    {
       id: "QERE0t_r2c",
       type: "code",
       data: {
@@ -173,6 +186,15 @@ const mockData = {
         text: "dawdaw",
         caption: "dawd",
         alignment: "left"
+      }
+    },
+    {
+      id: "h9o3IKatLu",
+      type: "quote",
+      data: {
+        text: "dawdaw",
+        caption: "dawd",
+        alignment: "center"
       }
     },
     {

@@ -3,12 +3,12 @@ import Styles from './Header.module.css';
 
 type TLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
-export type THeader = {
+export type THeaderData = {
   level: TLevel;
   text: string;
 };
 
-export const Header: FC<THeader> = ({ level, text }) => {
+export const Header: FC<THeaderData> = ({ level, text }) => {
   return (() => {
     switch (level) {
       case 1:
