@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Header, THeader } from '../src';
+import { Header, THeader } from '../src/components/Header';
 
 const meta: Meta = {
   title: 'Welcome',
