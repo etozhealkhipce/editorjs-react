@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { parseText } from '../../utils/parseText';
 import Styles from './Table.module.css';
 
 export type TTable = {
@@ -25,7 +26,7 @@ export const Table: FC<TTable> = ({ withHeadings, content }) => {
                       : Styles.td
                   }
                 >
-                  {text}
+                  {parseText(text)}
                 </th>
               ))}
             </tr>
@@ -43,7 +44,7 @@ export const Table: FC<TTable> = ({ withHeadings, content }) => {
                       : Styles.td
                   }
                 >
-                  {text}
+                  {parseText(text)}
                 </td>
               ))}
             </tr>

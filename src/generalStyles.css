@@ -11,5 +11,9 @@
 }
 
 .cdx-marker {
-  background: rgba(245,235,111,0.29);
+  background: rgba(245, 235, 111, 0.29);
+}
+
+a {
+  color: #313649;
 }

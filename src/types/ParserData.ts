@@ -1,91 +1,100 @@
 export interface IParagraph {
-  id: string,
-  type: "paragraph",
+  id: string;
+  type: 'paragraph';
   data: {
-    text: string,
-  },
-};
+    text: string;
+  };
+}
 
 type TLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export interface IHeader {
-  id: string,
-  type: "header",
+  id: string;
+  type: 'header';
   data: {
-    text: string,
-    level: TLevel,
-  },
-};
+    text: string;
+    level: TLevel;
+  };
+}
 
 export interface IList {
-  id: string,
-  type: "list",
+  id: string;
+  type: 'list';
   data: {
-    style: "unordered" | "ordered",
-    items: string[],
-  },
-};
+    style: 'unordered' | 'ordered';
+    items: string[];
+  };
+}
 
 export interface IDelimeter {
-  id: string,
-  type: 'delimiter',
+  id: string;
+  type: 'delimiter';
   // TODO change
-  data?: any,
-};
+  data?: any;
+}
 
 export interface IImage {
-  id: string,
-  type: 'image',
+  id: string;
+  type: 'image';
   data: {
     file: {
-      url: string,
-    },
-    caption?: string,
-    withBorder?: boolean,
-    stretched?: boolean,
-    withBackground?: boolean,
-  }
-};
+      url: string;
+    };
+    caption?: string;
+    withBorder?: boolean;
+    stretched?: boolean;
+    withBackground?: boolean;
+  };
+}
 
 export interface ICode {
-  id: string,
-  type: 'code',
+  id: string;
+  type: 'code';
   data: {
-    code: string,
-  },
-};
+    code: string;
+  };
+}
 
 export interface IRawData {
-  id: string,
-  type: 'rawTool',
+  id: string;
+  type: 'rawTool';
   data: {
-    html: string,
-  },
-};
+    html: string;
+  };
+}
 
 export interface IQuote {
-  id: string,
-  type: 'quote',
+  id: string;
+  type: 'quote';
   data: {
-    text: string,
-    caption: string,
-    alignment: 'left' | 'center' | 'right',
-  }
-};
+    text: string;
+    caption: string;
+    alignment: 'left' | 'center' | 'right';
+  };
+}
 
 export interface ITable {
-  id : string,
-  type: "table",
+  id: string;
+  type: 'table';
   data: {
-      withHeadings? : boolean,
-      content: []
-  }
-};
+    withHeadings?: boolean;
+    content: string[][];
+  };
+}
 
-export type TBlocks = (IParagraph | IHeader | IList | IDelimeter | IImage | ICode | IRawData | IQuote | ITable);
+export type TBlocks =
+  | IParagraph
+  | IHeader
+  | IList
+  | IDelimeter
+  | IImage
+  | ICode
+  | IRawData
+  | IQuote
+  | ITable;
 
 export interface IParser {
-  time: number,
-  version: string,
-  blocks: TBlocks[],
-};
+  time: number;
+  version: string;
+  blocks: TBlocks[];
+}
