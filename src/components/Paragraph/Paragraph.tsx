@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import { parseText } from '../../utils/parseText';
 import Styles from './Paragraph.module.css';
 
-type TParagraph = {
+export type TParagraph = {
   text: string;
 };
 

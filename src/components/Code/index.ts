@@ -1,1 +1,1 @@
-export { Code as default } from './Code';
+export { Code, TCode } from './Code';

@@ -1,1 +1,1 @@
-export { RawTool as default } from './RawTool';
+export { RawTool, TRawTool } from './RawTool';

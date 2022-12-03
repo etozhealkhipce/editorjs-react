@@ -2,7 +2,7 @@
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
   "include": ["src", "types"],
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
@@ -33,8 +33,8 @@
     // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
     "noEmit": true,
     "paths": {
-      "components/*": ["components/*"],
-      "utils/*": ["utils/*"]
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }

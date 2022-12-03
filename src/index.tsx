@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
-import Header from './components/Header';
-import List from './components/List';
-import Paragraph from './components/Paragraph';
-import Image from './components/Image';
-import Delimiter from './components/Delimiter';
-import Code from './components/Code';
-import RawTool from './components/RawTool';
-import Quote from './components/Quote';
-import Table from './components/Table';
+import { Header } from '@components/Header';
+import { List } from '@components/List';
+import { Paragraph } from '@components/Paragraph';
+import { Image } from '@components/Image';
+import { Delimiter } from '@components/Delimiter';
+import { Code } from '@components/Code';
+import { RawTool } from '@components/RawTool';
+import { Quote } from '@components/Quote';
+import { Table } from '@components/Table';
 import './generalStyles.css';
 
 export const Parser: FC<any> = ({ data }) => {
