@@ -1,0 +1,13 @@
+.list {
+  margin: 1rem 0;
+  margin: 0;
+  padding-left: 40px;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.listItem {
+  padding: 5.5px 0 5.5px 3px;
+  line-height: 1.6em;
+}

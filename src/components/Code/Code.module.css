@@ -1,0 +1,17 @@
+.code {
+  display: block;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  max-width: 100%;
+  min-width: 100px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-left: 4px solid rgb(138, 138, 138);
+  color: #666;
+  page-break-inside: avoid;
+  line-height: 1.6;
+  padding: 1rem 1.5rem;
+  resize: vertical;
+  margin: 1rem 0;
+}

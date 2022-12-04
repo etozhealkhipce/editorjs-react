@@ -1,0 +1,25 @@
+.figure {
+  width: 100%;
+  margin: 0;
+}
+
+.blockquote {
+  margin: 0;
+}
+
+.centeredQuote {
+  composes: blockquote;
+  text-align: center;
+}
+
+.paragraph {
+  display: block;
+  white-space: pre;
+  max-width: 100%;
+  background: #eee;
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  font-style: oblique;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
