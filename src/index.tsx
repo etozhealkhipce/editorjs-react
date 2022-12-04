@@ -11,7 +11,7 @@ import { Table } from './components/Table';
 
 import './generalStyles.css';
 
-import { IParser } from 'types/ParserData';
+import { IParser } from './types/ParserData';
 
 import {
   CODE_KEY,
