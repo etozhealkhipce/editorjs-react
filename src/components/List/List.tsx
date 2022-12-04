@@ -1,26 +1,31 @@
-import React, { FC } from 'react';
-import parse from 'html-react-parser';
+import React, { FC, useMemo } from 'react';
 import Styles from './List.module.css';
+import { parseText } from '../../utils/parseText';
 
-export type TList = {
-  listItems: string[];
-  orderedList?: boolean;
+const ORDERED_KEY = 'ordered';
+const UNORDERED_KEY = 'unordered';
+
+export type TListData = {
+  items: string[];
+  style?: typeof ORDERED_KEY | typeof UNORDERED_KEY;
 };
 
-export const List: FC<TList> = ({ listItems, orderedList = true }) => {
+export const List: FC<TListData> = ({ items, style = UNORDERED_KEY }) => {
+  const orderedList = useMemo(() => style === UNORDERED_KEY, []);
+
   return orderedList ? (
     <ul className={Styles.list}>
-      {listItems.map((li, index) => (
+      {items.map((text, index) => (
         <li className={Styles.listItem} key={index}>
-          {parse(li)}
+          {parseText(text)}
         </li>
       ))}
     </ul>
   ) : (
     <ol className={Styles.list}>
-      {listItems.map((li, index) => (
+      {items.map((text, index) => (
         <li className={Styles.listItem} key={index}>
-          {parse(li)}
+          {parseText(text)}
         </li>
       ))}
     </ol>

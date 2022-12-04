@@ -1,12 +1,13 @@
+import parse from 'html-react-parser';
 import React, { FC } from 'react';
 import Styles from './Table.module.css';
 
-export type TTable = {
+export type TTableData = {
   content: string[][];
   withHeadings: boolean;
 };
 
-export const Table: FC<TTable> = ({ withHeadings, content }) => {
+export const Table: FC<TTableData> = ({ withHeadings, content }) => {
   const _content = content.slice();
   const heading = withHeadings ? _content.splice(0, 1) : [];
 
@@ -25,7 +26,7 @@ export const Table: FC<TTable> = ({ withHeadings, content }) => {
                       : Styles.td
                   }
                 >
-                  {text}
+                  {parse(text)}
                 </th>
               ))}
             </tr>
@@ -43,7 +44,7 @@ export const Table: FC<TTable> = ({ withHeadings, content }) => {
                       : Styles.td
                   }
                 >
-                  {text}
+                  {parse(text)}
                 </td>
               ))}
             </tr>

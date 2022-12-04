@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+.stretched {
+  width: none;
+  margin: 0;
+}
+
 .background {
   padding: 15px 139px;
   background: #cdd1e0;

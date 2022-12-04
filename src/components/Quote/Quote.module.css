@@ -7,6 +7,11 @@
   margin: 0;
 }
 
+.centeredQuote {
+  composes: blockquote;
+  text-align: center;
+}
+
 .paragraph {
   display: block;
   white-space: pre;
