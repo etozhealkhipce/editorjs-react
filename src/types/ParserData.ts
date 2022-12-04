@@ -20,8 +20,10 @@ import {
   TABLE_KEY,
 } from 'utils/componentKeys';
 
-type TCommonType = {
+type TCommonType<T, K> = {
   id: string;
+  type: T;
+  data: K;
 };
 
 type TParagraph = TCommonType<typeof PARAGRAPH_KEY, TParagraphData>;
