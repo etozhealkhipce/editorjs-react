@@ -1,1 +1,1 @@
-export { Delimiter as default } from './Delimiter';
+export { Delimiter, TDelimiter } from './Delimiter';

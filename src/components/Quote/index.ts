@@ -1,1 +1,1 @@
-export { Quote as default } from './Quote';
+export { Quote, TQuote } from './Quote';

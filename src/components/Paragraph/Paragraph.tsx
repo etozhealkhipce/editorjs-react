@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { parseText } from '../../utils/parseText';
 import Styles from './Paragraph.module.css';
+import { parseText } from '@utils/parseText';
 
 export type TParagraphData = {
   text: string;
