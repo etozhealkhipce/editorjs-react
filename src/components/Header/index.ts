@@ -1,1 +1,1 @@
-export { Header, THeader } from './Header';
+export { Header, THeaderData } from './Header';
