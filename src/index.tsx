@@ -8,8 +8,11 @@ import Code from './components/Code';
 import RawTool from './components/RawTool';
 import Quote from './components/Quote';
 import Table from './components/Table';
+
 import './generalStyles.css';
+
 import { IParser } from 'types/ParserData';
+
 import {
   CODE_KEY,
   DATA_KEY,

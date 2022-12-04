@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etozhealkhipce/editorjs-react"
+  },
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -17,9 +21,7 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +38,7 @@
     "trailingComma": "es5"
   },
   "name": "editorjs-react",
-  "author": "alkhipce",
+  "author": "alkhipce & YunesB",
   "module": "dist/editorjs-react.esm.js",
   "size-limit": [
     {
@@ -51,13 +53,9 @@
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@size-limit/preset-small-lib": "^7.0.8",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/addons": "^6.4.22",
-    "@storybook/react": "^6.4.22",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "autoprefixer": "^10.4.13",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.0",
     "postcss": "^8.1.9",
