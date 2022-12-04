@@ -1,1 +1,1 @@
-export { RawTool, TRawTool } from './RawTool';
+export { RawTool, TRawToolData } from './RawTool';

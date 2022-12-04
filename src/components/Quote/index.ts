@@ -1,1 +1,1 @@
-export { Quote, TQuote } from './Quote';
+export { Quote, TQuoteData } from './Quote';

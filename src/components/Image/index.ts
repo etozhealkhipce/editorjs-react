@@ -1,1 +1,1 @@
-export { Image, TImage } from './Image';
+export { Image, TImageData } from './Image';

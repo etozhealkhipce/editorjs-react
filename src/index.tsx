@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
-import { Header } from '@components/Header';
-import { List } from '@components/List';
-import { Paragraph } from '@components/Paragraph';
-import { Image } from '@components/Image';
-import { Delimiter } from '@components/Delimiter';
-import { Code } from '@components/Code';
-import { RawTool } from '@components/RawTool';
-import { Quote } from '@components/Quote';
-import { Table } from '@components/Table';
+import { Header } from './components/Header';
+import { List } from './components/List';
+import { Paragraph } from './components/Paragraph';
+import { Image } from './components/Image';
+import { Delimiter } from './components/Delimiter';
+import { Code } from './components/Code';
+import { RawTool } from './components/RawTool';
+import { Quote } from './components/Quote';
+import { Table } from './components/Table';
+
 import './generalStyles.css';
 
 import { IParser } from 'types/ParserData';
@@ -24,9 +25,9 @@ import {
   QUOTE_KEY,
   RAW_TOOL_KEY,
   TABLE_KEY,
-} from 'utils/componentKeys';
+} from './utils/componentKeys';
 
-export const Parser: FC<Record<typeof DATA_KEY, IParser>> = ({ data }) => {
+const Parser: FC<Record<typeof DATA_KEY, IParser>> = ({ data }) => {
   const { blocks } = data;
 
   return (
@@ -83,4 +84,15 @@ export const Parser: FC<Record<typeof DATA_KEY, IParser>> = ({ data }) => {
   );
 };
 
-export { Parser as default };
+export {
+  Parser,
+  Header,
+  List,
+  Paragraph,
+  Image,
+  Delimiter,
+  Code,
+  RawTool,
+  Quote,
+  Table,
+};

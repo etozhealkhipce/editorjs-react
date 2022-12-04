@@ -1,1 +1,1 @@
-export { Code, TCode } from './Code';
+export { Code, TCodeData } from './Code';

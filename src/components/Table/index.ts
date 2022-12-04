@@ -1,1 +1,1 @@
-export { Table, TTable } from './Table';
+export { Table, TTableData } from './Table';

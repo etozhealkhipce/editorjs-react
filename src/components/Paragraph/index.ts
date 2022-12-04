@@ -1,1 +1,1 @@
-export { Paragraph, TParagraph } from './Paragraph';
+export { Paragraph, TParagraphData } from './Paragraph';
