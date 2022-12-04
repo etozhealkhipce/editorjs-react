@@ -1,12 +1,12 @@
-import { TCodeData } from 'components/Code/Code';
-import { TDelimiterData } from 'components/Delimiter/Delimiter';
-import { THeaderData } from 'components/Header/Header';
-import { TImageData } from 'components/Image/Image';
-import { TListData } from 'components/List/List';
-import { TParagraphData } from 'components/Paragraph/Paragraph';
-import { TQuoteData } from 'components/Quote/Quote';
-import { TRawToolData } from 'components/RawTool/RawTool';
-import { TTableData } from 'components/Table/Table';
+import { TCodeData } from 'components/Code';
+import { TDelimiterData } from 'components/Delimiter';
+import { THeaderData } from 'components/Header';
+import { TImageData } from 'components/Image';
+import { TListData } from 'components/List';
+import { TParagraphData } from 'components/Paragraph';
+import { TQuoteData } from 'components/Quote';
+import { TRawToolData } from 'components/RawTool';
+import { TTableData } from 'components/Table';
 
 import {
   CODE_KEY,
@@ -18,7 +18,7 @@ import {
   QUOTE_KEY,
   RAW_TOOL_KEY,
   TABLE_KEY,
-} from 'utils/componentKeys';
+} from '../utils/componentKeys';
 
 type TCommonType<T, K> = {
   id: string;
