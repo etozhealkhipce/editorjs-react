@@ -28,11 +28,9 @@ import {
 } from './utils/componentKeys';
 
 const Parser: FC<Record<typeof DATA_KEY, IParser>> = ({ data }) => {
-  const { blocks } = data;
-
   return (
     <>
-      {blocks.map((item) => {
+      {data?.blocks?.map(item => {
         const { type, data, id } = item;
 
         switch (type) {
