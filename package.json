@@ -1,9 +1,20 @@
 {
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+  "version": "0.1.0",
+=======
+>>>>>>> Stashed changes
   "repository": {
     "type": "git",
     "url": "https://github.com/etozhealkhipce/editorjs-react"
   },
+<<<<<<< Updated upstream
   "version": "0.1.3",
+=======
+  "version": "0.1.4",
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -70,6 +81,13 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    "html-react-parser": "^1.4.12"
+  }
+=======
+>>>>>>> Stashed changes
     "html-react-parser": "^1.4.12",
     "utils": "^0.3.1"
   },
@@ -79,6 +97,18 @@
     "editor.js markdown",
     "react editor.js render",
     "editorjs react",
+<<<<<<< Updated upstream
     "editorjs parser"
   ]
+=======
+    "editorjs parser",
+    "wysiwyg editor parser",
+    "wysiwyg to html",
+    "wysiwyg to react",
+    "wysiwyg to tsx",
+    "wysiwyg to jsx",
+    "wysiwyg components"
+  ]
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }
