@@ -34,9 +34,9 @@ const App = () => {
 
 # Code
 
-| Props | Description                                            | Type   | Default |
-| ----- | ------------------------------------------------------ | ------ | ------- |
-| code  | your code are going to display with preformatted style | string | -       |
+| Props | Description                        | Type   | Default |
+| ----- | ---------------------------------- | ------ | ------- |
+| code  | display code in preformatted style | string | -       |
 
 # Delimiter
 
@@ -55,7 +55,7 @@ const App = () => {
 
 | Props          | Description             | Type                           | Default |
 | -------------- | ----------------------- | ------------------------------ | ------- |
-| file           | heading text level      | object with field url: string; | -       |
+| file           | contains image info     | object with field url: string; | -       |
 | caption        | image caption           | string or undefined            | -       |
 | withBorder     | add border around image | boolean or undefined           | false   |
 | stretched      | stretch image           | boolean or undefined           | false   |
@@ -84,13 +84,13 @@ const App = () => {
 
 # RawTool
 
-| Props | Description    | Type   | Default |
-| ----- | -------------- | ------ | ------- |
-| html  | your html code | string | -       |
+| Props | Description | Type   | Default |
+| ----- | ----------- | ------ | ------- |
+| html  | your code   | string | -       |
 
 # Table
 
-| Props        | Description    | Type       | Default |
-| ------------ | -------------- | ---------- | ------- |
-| content      | your html code | string[][] | -       |
-| withHeadings | boolean        | boolean    | -       |
+| Props        | Description        | Type       | Default |
+| ------------ | ------------------ | ---------- | ------- |
+| content      | table data         | string[][] | -       |
+| withHeadings | add table headings | boolean    | false   |
