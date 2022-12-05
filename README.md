@@ -1,16 +1,5 @@
 # @alkhipce/editorjs-react
 
-<<<<<<< Updated upstream
-[![](https://flat.badgen.net/npm/v/@alkhipce/editorjs-react?icon=npm)](https://www.npmjs.com/package/@alkhipce/editorjs-react)
-[![](https://flat.badgen.net/github/stars/etozhealkhipce/editorjs-react)](https://github.com/etozhealkhipce/editorjs-react)
-
-## Install
-=======
-<<<<<<< Updated upstream
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
-
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
-=======
 [![](https://flat.badgen.net/npm/v/@alkhipce/editorjs-react?icon=npm)](https://www.npmjs.com/package/@alkhipce/editorjs-react)
 [![](https://flat.badgen.net/github/stars/etozhealkhipce/editorjs-react)](https://github.com/etozhealkhipce/editorjs-react)
 [![](https://flat.badgen.net/badge/demo/site/green)](https://editorjs-react.vercel.app/)
@@ -20,8 +9,6 @@ Congrats! You just saved yourself hours of work by bootstrapping this project wi
 #### https://editorjs-react.vercel.app/
 
 ## Installation
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
 ```shell
 npm i @alkhipce/editorjs-react
@@ -45,22 +32,6 @@ const App = () => {
 
 ## Available components
 
-<<<<<<< Updated upstream
-| Component |
-| --------- |
-| Code      |
-| Delimiter |
-| Header    |
-| Image     |
-| List      |
-| Paragraph |
-| Quote     |
-| RawTool   |
-| Table     |
-=======
-<<<<<<< Updated upstream
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
-=======
 # Code
 
 | Props | Description                                            | Type   | Default |
@@ -123,5 +94,3 @@ An alternative to fixing this problem would be to remove aliases altogether and 
 | ------------ | -------------- | ---------- | ------- |
 | content      | your html code | string[][] | -       |
 | withHeadings | boolean        | boolean    | -       |
->>>>>>> Stashed changes
->>>>>>> Stashed changes
