@@ -50,5 +50,5 @@ type TBlock =
 export type IParser = {
   time: number;
   version: string;
-  blocks: TBlock[];
+  blocks?: TBlock[];
 };
