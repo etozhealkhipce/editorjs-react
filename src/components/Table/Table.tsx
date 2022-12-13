@@ -1,18 +1,19 @@
-import parse from 'html-react-parser';
 import React, { FC } from 'react';
+import parse from 'html-react-parser';
+import { TClassName } from 'types/index.types';
 import Styles from './Table.module.css';
 
 export type TTableData = {
   content: string[][];
   withHeadings: boolean;
-};
+} & TClassName;
 
-export const Table: FC<TTableData> = ({ withHeadings, content }) => {
+export const Table: FC<TTableData> = ({ withHeadings, content, className }) => {
   const _content = content.slice();
   const heading = withHeadings ? _content.splice(0, 1) : [];
 
   return (
-    <div className={Styles.wrapper}>
+    <div className={`${Styles.wrapper} ${className}`}>
       <table className={Styles.table}>
         {withHeadings && (
           <thead className={Styles.tr}>
