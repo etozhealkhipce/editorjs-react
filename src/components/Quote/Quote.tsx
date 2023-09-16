@@ -1,6 +1,5 @@
 import React, { FC, useMemo } from 'react';
 import { TClassName } from 'types/index.types';
-import { parseText } from '@utils/parseText';
 import Styles from './Quote.module.css';
 
 export type TQuoteData = {
@@ -22,9 +21,9 @@ export const Quote: FC<TQuoteData> = ({
       <blockquote
         className={isTextCentered ? Styles.centeredQuote : Styles.blockquote}
       >
-        <p className={Styles.paragraph}>{parseText(text)}</p>
+        <p className={Styles.paragraph}>{text}</p>
       </blockquote>
-      <figcaption>— {parseText(caption)}</figcaption>
+      <figcaption>— {caption}</figcaption>
     </figure>
   );
 };

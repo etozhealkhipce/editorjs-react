@@ -1,6 +1,5 @@
 import React, { FC, useMemo } from 'react';
 import Styles from './List.module.css';
-import { parseText } from '@utils/parseText';
 import { TClassName } from 'types/index.types';
 
 const ORDERED_KEY = 'ordered';
@@ -22,7 +21,7 @@ export const List: FC<TListData> = ({
     <ul className={`${Styles.list} ${className}`}>
       {items.map((text, index) => (
         <li className={Styles.listItem} key={index}>
-          {parseText(text)}
+          {text}
         </li>
       ))}
     </ul>
@@ -30,7 +29,7 @@ export const List: FC<TListData> = ({
     <ol className={Styles.list}>
       {items.map((text, index) => (
         <li className={Styles.listItem} key={index}>
-          {parseText(text)}
+          {text}
         </li>
       ))}
     </ol>

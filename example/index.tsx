@@ -2,7 +2,7 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Parser, Table } from '../src';
+import { Parser, Table } from '@alkhipce/editorjs-react';
 
 import mockData from './utils/mockData';
 import './styles/style.css';
