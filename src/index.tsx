@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import { Header } from './components/Header';
 import { List } from './components/List';
 import { Paragraph } from './components/Paragraph';
@@ -8,10 +9,9 @@ import { Code } from './components/Code';
 import { RawTool } from './components/RawTool';
 import { Quote } from './components/Quote';
 import { Table } from './components/Table';
-
 import './generalStyles.css';
 
-import { IParser } from './types/ParserData';
+import { IParser } from './types/index.types';
 
 import {
   CODE_KEY,
@@ -30,7 +30,7 @@ import {
 const Parser: FC<Record<typeof DATA_KEY, IParser>> = ({ data }) => {
   return (
     <>
-      {data?.blocks?.map(item => {
+      {data?.blocks?.map((item) => {
         const { type, data, id } = item;
 
         switch (type) {

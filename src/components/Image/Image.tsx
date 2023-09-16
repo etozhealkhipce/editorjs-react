@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { TClassName } from 'types/index.types';
 import Styles from './Image.module.css';
 
 export type TImageData = {
@@ -9,7 +10,7 @@ export type TImageData = {
   withBorder?: boolean;
   stretched?: boolean;
   withBackground?: boolean;
-};
+} & TClassName;
 
 export const Image: FC<TImageData> = ({
   file,
@@ -17,9 +18,12 @@ export const Image: FC<TImageData> = ({
   withBorder = false,
   withBackground = false,
   stretched = false,
+  className,
 }) => {
   return (
-    <figure className={stretched ? Styles.stretched : Styles.figure}>
+    <figure
+      className={`${stretched ? Styles.stretched : Styles.figure} ${className}`}
+    >
       {withBackground ? (
         <div
           className={!withBorder ? Styles.background : Styles.backgroundBorder}

@@ -1,18 +1,24 @@
 import React, { FC, useMemo } from 'react';
-import { parseText } from '../../utils/parseText';
+import { TClassName } from 'types/index.types';
+import { parseText } from '@utils/parseText';
 import Styles from './Quote.module.css';
 
 export type TQuoteData = {
   text: string;
   caption: string;
   alignment: 'left' | 'center';
-};
+} & TClassName;
 
-export const Quote: FC<TQuoteData> = ({ text, caption, alignment }) => {
+export const Quote: FC<TQuoteData> = ({
+  text,
+  caption,
+  alignment,
+  className,
+}) => {
   const isTextCentered = useMemo(() => alignment === 'center', []);
 
   return (
-    <figure className={Styles.figure}>
+    <figure className={`${Styles.figure} ${className}`}>
       <blockquote
         className={isTextCentered ? Styles.centeredQuote : Styles.blockquote}
       >
